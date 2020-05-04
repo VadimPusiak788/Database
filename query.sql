@@ -1,4 +1,3 @@
-
 select positions, count(player_name) as count_pos
 from player
 GROUP BY positions
