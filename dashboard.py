@@ -9,7 +9,6 @@ username = 'hr'
 password = '11'
 database = 'localhost/ORCL'
 
-chart_studio.tools.set_credentials_file(username='VadimPusiak', api_key='GQ51LUmmmgA95Z7yIIbT')
 
 def fileId_url(url):
     """Return fileId from a url."""
