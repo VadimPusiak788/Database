@@ -60,3 +60,5 @@ result3  = cursor3.fetchall()
 
 for i in result3:
 	print(i)
+
+connection.close()
