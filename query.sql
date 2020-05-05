@@ -4,7 +4,6 @@ GROUP BY positions
 order by count_pos DESC;
 
 select  round((count(player.player_name)/14) * 100, 2) as rate
-    --,teams.team
     ,NVL(teams.team, 0) as teams
 from player
 RIGHT join teams 
