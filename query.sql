@@ -12,14 +12,10 @@ GROUP by NVL(teams.team, 0)
 order by teams DESC;
 
 select count(player.player_name) as count_player
-            , years.star_years as all_years
+            , years.year as all_years
             from player
             INNER JOIN years
             on years.player_name = player.player_name
             
-GROUP by years.star_years
+GROUP by years.year
 ORDER by count_player DESC;  
-            
-
-
-
