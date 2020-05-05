@@ -76,16 +76,13 @@ teams = dict()
 for row in cursor:
     teams[row[0]] = row[1]
 
-pie = go.Pie(labels=list(teams.keys()), values=list(teams.values()))
+team = go.Scatter(
+    y=list(teams.keys()),
+    x=list(teams.values())
+)
+data_about = [team]
 
-tems_star_players_url = py.plot([pie], filename='star_teams')
-
-query3 = """select count(player_name) as count_player
-            , year as all_years
-            from NBA_star
-
-GROUP by years
-ORDER by count_player"""
+tems_star_players_url = py.plot(data_about, filename='star_teams')
 
 cursor.execute(query3)
 
